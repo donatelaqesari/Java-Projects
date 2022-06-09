@@ -40,26 +40,22 @@ public class CafeUtil{
     }
 
     public void printPriceChart(String product, double price, int maxQuantity){
-        if(product == "Columbian Coffee Grounds"){
-            double newPrice = 0;
+            System.out.println(product);
             // // // --- Original Task----
-            // for ( int i=1; i<=maxQuantity; i++){
-            //     newPrice += price;
-            //     System.out.println(i + " - $" + newPrice);
-            // }
+            for ( int i=1; i<=maxQuantity; i++){
+             System.out.println(i + " - $" + i * price);
+             }
 
             // // // --- Senpai Bonus, Sensei Bonus----
             for ( int i=1; i<=maxQuantity; i++){
-                newPrice += price;
-                newPrice -= 0.50;
                 NumberFormat franceFormat = NumberFormat.getCurrencyInstance(Locale.US);
-                String formattedString = franceFormat.format(newPrice);
+                String formattedString = franceFormat.format(i*price - 0.50 * (i-1));
                 System.out.println(i + " -" + formattedString);
             }
         }
-    }
 
-    public boolean displayMenu(ArrayList<String> menuItems, ArrayList<Double> prices){
+
+    public boolean displayMenu (ArrayList<String> menuItems, ArrayList<Double> prices){
         if(menuItems.size() == prices.size()){
             int i;
             for( i= 0; i <menuItems.size() && i<prices.size(); i++){

@@ -37,6 +37,7 @@ public class TestCafe {
         }
 
         System.out.println("\n----- Ninja Bonus----");
+
         appTest.printPriceChart("Columbian Coffee Grounds", 2.00, 4);
 
         System.out.println("\n----- Display Menu Test-----");
