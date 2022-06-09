@@ -15,6 +15,7 @@ public class TestPuzzle {
             System.out.println(generator.getRandomLetter());
             System.out.println(generator.generatePassword());
             System.out.println(generator.getPassword(5));
+
     }
 
 }
