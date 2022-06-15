@@ -36,10 +36,12 @@ public class TestOrders {
         //System.out.println(order3.getOrderTotal());
 
         order3.display();
-        //order1.addItem(item1);
-        //order1.addItem(item4);
-        //order1.addItem(item2);
-        //order1.display();
+
+
+        order1.addItem(item1);
+        order1.addItem(item4);
+        order1.addItem(item2);
+        order1.display();
 
     }
 }
