@@ -1,7 +1,6 @@
 import java.util.Random;
 
 public class BankAccount {
-    private int totalAccounts;
     private Double checkingBalance;
     private Double savingsBalance;
 
@@ -9,16 +8,17 @@ public class BankAccount {
     private static int numberOfAccounts = 0;
 
     // class member (static) that tracks the total amount of money stored in every account created.
-    private static Double totalAmount = 0.0;
-    private String accountNumber;
+    public static Double totalAmount = 0.0;
+    public String accountNumber;
 
     //In the constructor, be sure to increment the account count.
     public BankAccount() {
+        BankAccount.numberOfAccounts+=1;
         this.checkingBalance = 0.0;
         this.savingsBalance = 0.0;
         String accountNumber = generateNumber();
         System.out.println("New user created with account number: " + accountNumber + ".");
-        numberOfAccounts++;
+        //numberOfAccounts++;
     }
 
     //GETTERS
@@ -28,6 +28,9 @@ public class BankAccount {
 
     public Double getSavingsBalance() {
         return this.savingsBalance;
+    }
+    public String getAccountNumber(){
+        return this.accountNumber;
     }
 
     //Create a method that will allow a user
@@ -40,7 +43,7 @@ public class BankAccount {
             this.savingsBalance += money;
         }
         totalAmount += money;
-        System.out.println("New total amount is:" + totalAmount);
+        System.out.println("Total amount is:" + totalAmount);
     }
 
     //Create a method to withdraw money from one balance.
@@ -52,8 +55,8 @@ public class BankAccount {
 
             } else {
                 this.checkingBalance -= money;
-                totalAmount -= money;
-                System.out.println("New savings:" + this.checkingBalance);
+               totalAmount -= money;
+                System.out.println("New total checking:" + this.checkingBalance);
             }
         } else {
             if (money > this.savingsBalance) {
@@ -62,7 +65,7 @@ public class BankAccount {
             } else {
                 this.savingsBalance -= money;
                 totalAmount -= money;
-                System.out.println("New savings:" + this.savingsBalance);
+                System.out.println("New total savings:" + this.savingsBalance);
             }
 
         }
@@ -81,5 +84,7 @@ public class BankAccount {
         }
         return returnStr;
     }
+
+
 }
 
