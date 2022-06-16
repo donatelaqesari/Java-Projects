@@ -15,7 +15,6 @@ public class AnimalTest {
         bat.attackTown();
         bat.eatHumans();
         bat.eatHumans();
-        bat.eatHumans();
         bat.fly();
         bat.displayEnergy();
     }
