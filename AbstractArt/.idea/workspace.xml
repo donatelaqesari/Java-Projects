@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53822df2-7538-44c5-8a43-20269281f013" name="Changes" comment="" />
+    <list default="true" id="53822df2-7538-44c5-8a43-20269281f013" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/donatelaqesari/Desktop/AbstractArt"
+    "last_opened_file_path": "/Users/donatelaqesari/Desktop/Dojo_Assigments/Java/AbstractArt"
   }
 }]]></component>
   <component name="RunManager">
@@ -58,6 +60,7 @@
       <updated>1655441450452</updated>
       <workItem from="1655441454147" duration="5121000" />
       <workItem from="1655547686654" duration="3852000" />
+      <workItem from="1655551726384" duration="1012000" />
     </task>
     <servers />
   </component>
