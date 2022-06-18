@@ -1,7 +1,7 @@
 public class Bat extends Mammal {
 
     //constructor for Bat
-    public Bat(){
+    public Bat() {
         this.setEnergyLevel(300); //default energy for the bat
     }
 
@@ -19,8 +19,6 @@ public class Bat extends Mammal {
         System.out.println("Bat is attacking a town!");
         this.setEnergyLevel(this.getEnergyLevel() - 100);
     }
-
-
 
 
 }
