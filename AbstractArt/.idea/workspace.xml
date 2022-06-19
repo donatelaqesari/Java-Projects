@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53822df2-7538-44c5-8a43-20269281f013" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Calculatorr/Calculatorr.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Coffeedore64/Coffeedore64.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Calculator2/out/production/Calculator2/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator2/out/production/Calculator2/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Calculator2/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator2/src/Calculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,7 @@
       <updated>1655441450452</updated>
       <workItem from="1655441454147" duration="5121000" />
       <workItem from="1655547686654" duration="3852000" />
-      <workItem from="1655551726384" duration="1565000" />
+      <workItem from="1655551726384" duration="2119000" />
     </task>
     <servers />
   </component>
