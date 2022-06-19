@@ -31,6 +31,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/donatelaqesari/Desktop/DemoDeckOfCards",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
@@ -42,7 +43,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655484393236</updated>
-      <workItem from="1655484397260" duration="4416000" />
+      <workItem from="1655484397260" duration="3908000" />
+      <workItem from="1655633033787" duration="6450000" />
     </task>
     <servers />
   </component>
