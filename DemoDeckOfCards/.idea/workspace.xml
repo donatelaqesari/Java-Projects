@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acc8eed2-dbc3-47ca-89ac-8d96803e0536" name="Changes" comment="" />
+    <list default="true" id="acc8eed2-dbc3-47ca-89ac-8d96803e0536" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../AbstractArt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AbstractArt/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/donatelaqesari/Desktop/DemoDeckOfCards",
+    "last_opened_file_path": "/Users/donatelaqesari/Desktop/Dojo_Assigments/Java/DemoDeckOfCards",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
@@ -45,6 +47,7 @@
       <updated>1655484393236</updated>
       <workItem from="1655484397260" duration="3908000" />
       <workItem from="1655633033787" duration="6450000" />
+      <workItem from="1655654639904" duration="573000" />
     </task>
     <servers />
   </component>
