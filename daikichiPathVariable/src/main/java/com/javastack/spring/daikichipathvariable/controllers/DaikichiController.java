@@ -1,6 +1,7 @@
 package com.javastack.spring.daikichipathvariable.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController //accept request from the client
@@ -17,5 +18,9 @@ public class DaikichiController {
     @RequestMapping("/tomorrow")
     public String daikichiTomorrow(){
         return "Tomorrow, an opportunity will arise, so be sure to be open to new ideas!";
+    }
+    @RequestMapping("/now")
+    public String index(@RequestParam(value="q") String searchQuery) {
+        return "You searched for: " + searchQuery;
     }
 }
