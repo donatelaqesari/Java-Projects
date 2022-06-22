@@ -21,8 +21,8 @@ public class MainController {
         model.addAttribute("name", name);
         model.addAttribute("itemName", itemName);
         model.addAttribute("price", price);
-        model.addAttribute("description",description);
-        model.addAttribute("vendor",vendor);
+        model.addAttribute("description", description);
+        model.addAttribute("vendor", vendor);
 
         return "index.jsp";
     }
