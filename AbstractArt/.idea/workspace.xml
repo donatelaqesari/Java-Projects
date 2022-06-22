@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="53822df2-7538-44c5-8a43-20269281f013" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../First_Java_Program" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HashMap/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HashMap/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HashMap/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HashMap/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HashMap/HashMap.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HashMap/out/production/HashMap/HashMapJava.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HashMap/src/HashMapJava.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../daikichiPathVariable/src/main/java/com/javastack/spring/daikichipathvariable/controllers/DaikichiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../daikichiPathVariable/src/main/java/com/javastack/spring/daikichipathvariable/controllers/DaikichiController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
