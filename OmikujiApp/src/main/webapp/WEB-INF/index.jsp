@@ -13,17 +13,7 @@
 <div class="container">
     <form action="/process" method="post">
         <h3>Pick any number from 5 to 25 </h3>
-        <select class="formfields" name="numbers">
-            <option value="Berkley">1</option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-            <option value="3">4</option>
-            <option value="L4">5</option>
-            <option value="5">6</option>
-            <option value="6">7</option>
-            <option value="7">T8</option>
-            <option value="8">9</option>
-        </select>
+        <input class="formfields" type="number" name="numbers">
         <h3> Enter the name of any city</h3>
         <input class="formfields" type="text" name="city">
         <h3> Enter the name of any real person</h3>
