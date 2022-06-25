@@ -17,6 +17,7 @@
         luck.
         Also, <c:out value="${comment}"/>
     </p>
+    <a href="/"> Go Back!</a>
 </div>
 </body>
 </html>
