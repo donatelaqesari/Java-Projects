@@ -7,24 +7,36 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class BookController {
     @Autowired
     BookService bookService;
 
-    @GetMapping("/books/{bookId}")
-    public String index(Model model,  @PathVariable("bookId") Long bookId){
-        System.out.println(bookId);
-        Book book = bookService.findBook(bookId);
+    @GetMapping("/books")
+    public String index(Model model) {
 
-        ArrayList<Book> books = (ArrayList<Book>) bookService.allBooks();
+        List<Book> books = bookService.allBooks();
 
-        model.addAttribute("book", book);
-        model.addAttribute("allBooks", books);
+        model.addAttribute("books", books);
+
         return "index.jsp";
     }
+    @GetMapping("/books/{bookId}")
+    public String index( @PathVariable("bookId") Long bookId, Model model){
+        //System.out.println(bookId);
+        Book book = bookService.findBook(bookId);
+        model.addAttribute("book", book);
+
+        return "show.jsp";
+    }
+
+
+
+
+
+
 }

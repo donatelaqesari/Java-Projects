@@ -3,32 +3,37 @@ package com.betaplan.donatela.albums.controllers;
 import com.betaplan.donatela.albums.models.Album;
 import com.betaplan.donatela.albums.services.AlbumService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.List;
+@Controller
 
-@RestController
 public class HomeController {
     @Autowired
-    private AlbumService aService;
+    private AlbumService albumService;
 
     @GetMapping("/")
-    public List<Album> index(){
-        return  this.aService.getAllAlbums();
+    public String index(Model viewModel) {
+        viewModel.addAttribute("allAlbums", this.albumService.getAllAlbums());
+        return "index.jsp";
     }
 
-    @GetMapping("/{id}")
-    public Album getONe(@PathVariable("id") Long id){
-        return this.aService.getOneAlbum(id);
+    //for adding new album
+    @GetMapping("/new")
+    public String add() {
+        return "add.jsp";
     }
 
-    @PostMapping("/create")
-    public Album create(Album album){
-        return this.aService.createAlbum(album);
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public String delete(@PathVariable("id") Long id){
-        return this.aService.deleteAlbum(id);
+    @PostMapping("/new")
+    public String addNew(@RequestParam("albumName") String album,
+                         @RequestParam("bandName") String band,
+                         @RequestParam("year") Integer year) {
+        //assemble the createAlbum function from the service
+        Album albumToSave = new Album(album, band, year);
+        this.albumService.createAlbum(albumToSave);
+        return "redirect:/";
     }
 }
