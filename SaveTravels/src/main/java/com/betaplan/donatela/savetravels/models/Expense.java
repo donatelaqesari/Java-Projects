@@ -22,6 +22,9 @@ public class Expense {
     @NotNull
     @Min(0)
     private Float amount;
+    @NotNull
+    @Size(min = 1, max = 200, message="Description must not be blank")
+    private String description;
 
     @Column(updatable = false)
     @DateTimeFormat(pattern="yyy-MM-DD HH-mm-ss")
@@ -43,10 +46,11 @@ public class Expense {
     public Expense() {
     }
 
-    public Expense( String expenseName, String vendorName, Float amount) {
+    public Expense( String expenseName, String vendorName, Float amount, String description) {
         this.expenseName = expenseName;
         this.vendorName = vendorName;
         this.amount = amount;
+        this.description = description;
     }
 //GETTERS AND SETTERS
 
@@ -98,5 +102,11 @@ public class Expense {
         this.updatedAt = updatedAt;
     }
 
+    public String getDescription() {
+        return description;
+    }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

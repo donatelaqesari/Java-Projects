@@ -11,29 +11,40 @@
     <meta charset="UTF-8">
     <title>Add an Expense</title>
 </head>
-<body>
+<body style="margin: 10vw;">
 <div class="container">
     <h1> Add an expense:</h1>
     <hr>
     <h3>Description must not be blank </h3>
     <%--@elvariable id="newExpense" type=""--%>
     <form:form method="POST" action="/new" modelAttribute="newExpense">
-        <form:label path="expenseName">Expense Name</form:label>
-        <form:errors path="expenseName"/>
-        <form:input path="expenseName" type="text"/>
-        <form:label path="vendorName">vendor</form:label>
-        <form:errors path="vendorName"/>
-        <form:input path="vendorName" type="text"/>
-        <form:label path="amount">Amount</form:label>
-        <form:errors path="amount"/>
-        <form:input path="amount" type="text"/>
-        <p>
+        <div>
+            <form:label path="expenseName">Expense Name</form:label> <br/>
+            <form:errors path="expenseName" class="text-danger"/>
+            <form:input style="width:250px;" path="expenseName" type="text"/>
+        </div>
+        <div>
+            <form:label path="vendorName">Vendor</form:label> <br/>
+            <form:errors path="vendorName" class="text-danger"/>
+            <form:input style="width:250px;" path="vendorName" type="text"/>
+        </div>
+        <div>
+            <form:label path="amount">Amount</form:label> <br/>
+            <form:errors path="amount" class="text-danger"/>
+            <form:input style="width:250px;" path="amount" type="text"/>
+        </div>
+        <div>
+            <form:label path="description">Description: </form:label><br/>
+            <form:errors path="description" class="text-danger"/>
+            <form:textarea style="width:250px;" rows="3" path="description"/>
+        </div>
+        <div>
             <button>Create an Expense</button>
-        </p>
+        </div>
     </form:form>
 
     <%-- the format that used before modelattribute --%>
-    <form action="/htmladd" method="post">
+    <%--<form action="/htmladd" method="post">
         <p>Expense Name:</p>
         <input name="expenseName" type="text">
         <p>Vendor:</p>
@@ -41,7 +52,7 @@
         <p>Amount:</p>
         <input name="amount" type="text">
         <button>Submit</button>
-    </form>
+    </form> --%>
 </div>
 </body>
 </html>

@@ -37,4 +37,7 @@ public class ExpenseService {
         this.eRepo.deleteById(id);
         return "Expense has been deleted";
     }
+    public Expense getById(Long id){
+        return this.eRepo.findById(id).orElse(null);
+    }
 }
