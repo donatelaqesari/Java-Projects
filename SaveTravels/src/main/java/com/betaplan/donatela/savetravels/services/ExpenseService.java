@@ -12,7 +12,7 @@ public class ExpenseService {
     @Autowired
     private ExpenseRepository eRepo;
 
-    //Get every single expense from database
+
     public List<Expense> getAllExpenses() {
         return this.eRepo.findAll();
     }
