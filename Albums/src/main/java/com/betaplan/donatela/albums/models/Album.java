@@ -7,6 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "albums")
@@ -24,19 +25,33 @@ public class Album {
     @Min(1700)
     private Integer year;
 
+    //for one to many relationishp
+    //an array list that keeps track of every single song object (albumsongison)
+    //mapedby is the descriptor of the albumsongIsOn
+    @OneToMany(mappedBy = "albumSongIsON", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Song> songs;
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(List<Song> songs) {
+        this.songs = songs;
+    }
+
     @Column(updatable = false)
-    @DateTimeFormat(pattern="yyy-MM-DD HH-mm-ss")
+    @DateTimeFormat(pattern = "yyy-MM-DD HH-mm-ss")
     private Date createdAt;
-    @DateTimeFormat(pattern="yyy-MM-DD HH-mm-ss")
+    @DateTimeFormat(pattern = "yyy-MM-DD HH-mm-ss")
     private Date updatedAt;
 
     @PrePersist
-    protected void onCreate()
-    {
+    protected void onCreate() {
         this.createdAt = new Date();
     }
+
     @PreUpdate
-    protected void onUpdate(){
+    protected void onUpdate() {
         this.updatedAt = new Date();
     }
 

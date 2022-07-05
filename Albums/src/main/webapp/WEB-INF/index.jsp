@@ -12,7 +12,7 @@
 <body>
 <div class="container">
     <h1>Welcome to Records </h1>
-    <a href="/new">Add an album</a>
+    <a href="/new">Add an album</a> <a href="/song/new">Add a new Song</a>
     <hr>
     <table class="table table-striped table-dark">
         <thead>
@@ -27,7 +27,7 @@
         <c:forEach items="${allAlbums}" var="album">
             <tr>
                 <td>${album.id}</td>
-                <td>${album.albumName}</td>
+                <td><a href="/details/${album.id}">${album.albumName}</a></td>
                 <td>${album.bandName}</td>
                 <td>${album.year}</td>
             </tr>
