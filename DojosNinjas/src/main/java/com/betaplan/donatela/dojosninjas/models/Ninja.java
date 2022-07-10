@@ -1,6 +1,7 @@
 package com.betaplan.donatela.dojosninjas.models;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "ninjas")
@@ -11,10 +12,36 @@ public class Ninja {
     private String firstName;
     private String lastName;
     private Integer age;
-
+    @Column(updatable=false)
+    private Date createdAt;
+    private Date updatedAt;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ninja_id")
-    private Dojo dojo; //same as mappedBy
+    @JoinColumn(name = "dojo_id")
+    private Dojo dojoIsReady; //same as mappedBy
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public Dojo getDojoIsReady() {
+        return dojoIsReady;
+    }
+
+    public void setDojoIsReady(Dojo dojoIsReady) {
+        this.dojoIsReady = dojoIsReady;
+    }
 
     public Ninja() {
     }
@@ -57,11 +84,4 @@ public class Ninja {
         this.age = age;
     }
 
-    public Dojo getDojo() {
-        return dojo;
-    }
-
-    public void setDojo(Dojo dojo) {
-        this.dojo = dojo;
-    }
 }

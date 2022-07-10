@@ -10,34 +10,39 @@
     <meta charset="UTF-8">
     <title>Language</title>
 </head>
-<body style="margin: 10vw;">
-<%--@elvariable id="newNinja" type=""--%>
-<form:form method="POST" action="/ninjas/new" modelAttribute="newNinja">
-<form:hidden path="id"/>
+<body>
+<div class="container">
+        <a href="dojos"> Dashboard</a>
+        <h1>New Ninja</h1>
+        <%--@elvariable id="ninjas" type=""--%>
+        <%--@elvariable id="ninja" type=""--%>
+        <form:form class="form"  action="/ninjas" method="POST" modelAttribute="ninja">
+            <div class="form-group row">
+                <form:label path="dojo"> Select Dojo:</form:label>
+                <form:select path="dojo">
+                    
+                   
 
-<%--  <form:select name="dojo">Dojo:
-    <form:options items="${ dojos }" itemLabel="name" itemValue="id" />
-</form:select>  --%>
-<select name="dojo">
-    <c:forEach items="${ dojos }" var="dojo">
-        <option value=<c:out value="${ dojo.id }"/> > <c:out value="${ dojo.name }"/> </option>
+                    <c:forEach items="${dojo}" var="dojo">
+                        <form:option value="${dojo}"><c:out value="${dojo.location}"/></form:option>
+                    </c:forEach>
+                </form:select>
+            </div>
+            <div class="form-group row">
+                <form:label path="firstName">First Name:</form:label>
+                <form:input path="firstName"/>
+            </div>
+            <div class="form-group row">
+                <form:label path="lastName">Last Name:</form:label>
+                <form:input path="lastName"/>
+            </div>
+            <div class="form-group row">
+                <form:label cssClass="label left" path="age">Age:</form:label>
+                <form:input cssClass="box" path="age"/>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Create"/>
+        </form:form>
+    </div>
 
-    </c:forEach>
-
-</select>
-<form:label path="firstName">First Name
-    <form:input path="firstName"/>
-</form:label><br>
-
-<form:label path="lastName">Last Name
-    <form:input path="lastName"/>
-</form:label><br>
-
-<form:label path="age">Age
-    <form:input path="age" type="number"/>
-</form:label><br>
-
-<input type="submit" name="" value="Create Person">
-</form:form>
 </body>
 </html>

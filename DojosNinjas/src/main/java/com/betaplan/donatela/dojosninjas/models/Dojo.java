@@ -1,6 +1,8 @@
 package com.betaplan.donatela.dojosninjas.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
 
@@ -10,19 +12,41 @@ public class Dojo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    @NotNull
+    @Size(min = 1, max = 100)
+    private String location;
+    @Column(updatable = false)
     private Date createdAt;
+    private Date updatedAt;
+
+    @OneToMany(mappedBy = "dojoIsReady", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Ninja> ninjas;
+
+    public Dojo(Long id, String location, Date createdAt, Date updatedAt, List<Ninja> ninjas) {
+        this.id = id;
+        this.location = location;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.ninjas = ninjas;
+    }
 
     public Dojo() {
     }
 
-    @OneToMany(mappedBy = "dojo", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Ninja> ninjas;
+    public Date getCreatedAt() {
+        return createdAt;
+    }
 
-    public Dojo(String name) {
-        this.id = id;
-        this.name = name;
+    public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     public Long getId() {
@@ -33,21 +57,14 @@ public class Dojo {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getLocation() {
+        return location;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
 
     public List<Ninja> getNinjas() {
         return ninjas;
