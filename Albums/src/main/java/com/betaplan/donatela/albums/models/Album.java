@@ -31,6 +31,35 @@ public class Album {
     @OneToMany(mappedBy = "albumSongIsON", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Song> songs;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User owner;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "likes",
+            joinColumns = @JoinColumn(name = "album_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id"
+            )
+    )
+    private List<User> likers;
+
+    public List<User> getLikers() {
+        return likers;
+    }
+
+    public void setLikers(List<User> likers) {
+        this.likers = likers;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
     public List<Song> getSongs() {
         return songs;
     }

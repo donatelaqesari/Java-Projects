@@ -1,6 +1,7 @@
 package com.betaplan.donatela.albums.services;
 
 import com.betaplan.donatela.albums.models.Album;
+import com.betaplan.donatela.albums.models.User;
 import com.betaplan.donatela.albums.repositories.AlbumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,6 +40,20 @@ public class AlbumService {
     public String deleteAlbum(Long id) {
         this.aRepo.deleteById(id);
         return "Album has been deleted";
+    }
+
+    //Like a album
+    public void likeAlbum (User user, Album album){
+        List<User> userWhoLiked = album.getLikers();
+        userWhoLiked.add(user);
+        this.aRepo.save(album);
+    }
+
+    //Unlike a album
+    public void unlikeAlbum (User user, Album album){
+        List<User> userWhoLiked = album.getLikers();
+        userWhoLiked.remove(user);
+        this.aRepo.save(album);
     }
 
 }
